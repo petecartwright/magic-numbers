@@ -1,0 +1,296 @@
+/* Magic Numbers — ticket cost panel */
+
+#mn-ticket-panel {
+  position: fixed;
+  top: 125px;
+  right: 30px;
+  z-index: 9999;
+  background: white;
+  border: 1px solid #81c784;
+  border-radius: 6px;
+  padding: 10px 14px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  width: 150px;
+  font-family: inherit;
+}
+
+.mn-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 6px;
+}
+
+.mn-drag-handle {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  opacity: 0.35;
+  flex-shrink: 0;
+}
+
+.mn-drag-handle span {
+  display: block;
+  width: 14px;
+  height: 2px;
+  background: #2e7d32;
+  border-radius: 1px;
+}
+
+.mn-panel-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #2e7d32;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mn-panel-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.mn-panel-close:hover {
+  color: #333;
+}
+
+.mn-panel-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* ℹ️ About icon in panel title */
+
+.mn-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.85rem;
+  cursor: default;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.mn-info-tooltip {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: -8px;
+  background: #333;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 7px 9px;
+  border-radius: 4px;
+  width: 190px;
+  white-space: normal;
+  text-align: left;
+  pointer-events: none;
+  z-index: 10000;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.mn-info-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 10px;
+  border: 5px solid transparent;
+  border-bottom-color: #333;
+}
+
+.mn-info-icon:hover .mn-info-tooltip {
+  display: block;
+}
+
+/* Help icon on ticket label (package mode) */
+
+.mn-help-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  color: #888;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: default;
+  position: relative;
+  vertical-align: middle;
+}
+
+#mn-ticket-panel.mn-package-mode .mn-help-icon {
+  display: inline-flex;
+}
+
+.mn-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  right: -14px;
+  background: #333;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 6px 8px;
+  border-radius: 4px;
+  width: 170px;
+  white-space: normal;
+  text-align: center;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.mn-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+.mn-help-icon:hover .mn-tooltip {
+  display: block;
+}
+
+.mn-panel-input-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mn-panel-symbol {
+  padding: 4px 6px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 0.9rem;
+  border-right: 1px solid #ccc;
+}
+
+.mn-panel-input {
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  width: 100%;
+  font-family: inherit;
+  -moz-appearance: textfield;
+}
+
+.mn-panel-input::-webkit-outer-spin-button,
+.mn-panel-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#mn-toggle {
+  display: none;
+  position: fixed;
+  top: 125px;
+  right: 30px;
+  z-index: 9999;
+  background: white;
+  border: 1px solid #81c784;
+  border-radius: 6px;
+  width: 48px;
+  height: 36px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+#mn-toggle:hover {
+  background: #f0faf0;
+}
+
+/* Magic Numbers — injected total price box */
+
+.mn-total-box {
+  background-color: #f0faf0;
+  border: 1px solid #81c784;
+  border-radius: 4px;
+  padding: 6px 12px 8px 16px;
+  margin: 0 0 0 32px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: fit-content;
+  min-width: 120px;
+}
+
+.mn-total-box .mn-heading {
+  color: #2e7d32 !important;
+  font-weight: 700 !important;
+  margin: 0 0 2px !important;
+}
+
+.mn-total-box .mn-price {
+  display: flex !important;
+  align-items: flex-start !important;
+  line-height: 1 !important;
+  color: #1b5e20 !important;
+}
+
+.mn-total-box .mn-price .symbol {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  color: #1b5e20 !important;
+  margin-top: 4px !important;
+}
+
+.mn-total-box .mn-price .int-price {
+  font-size: 1.9rem !important;
+  font-weight: 800 !important;
+  color: #1b5e20 !important;
+  letter-spacing: -0.5px !important;
+}
+
+.mn-total-box .mn-sub {
+  color: #388e3c !important;
+  margin: 2px 0 0 !important;
+  font-size: 0.75rem !important;
+}
+
+.mn-total-box .mn-needs-tickets {
+  color: #888 !important;
+  font-style: italic !important;
+  margin: 4px 0 0 !important;
+  font-size: 0.72rem !important;
+}
+
+.mn-total-box .mn-loading {
+  text-align: center !important;
+  padding: 8px 0 !important;
+  color: #aaa !important;
+  font-size: 1.4rem !important;
+  width: 100% !important;
+}
+
+.mn-total-box .mn-calc {
+  color: #666 !important;
+  margin: 2px 0 0 !important;
+  font-size: 0.72rem !important;
+  white-space: normal !important;
+}

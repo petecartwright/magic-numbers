@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" rx="20" fill="#2D1B69"/>
+  <!-- Wand -->
+  <polygon points="33.5,101.5 26.5,94.5 74.5,46.5 81.5,53.5" fill="#C8A850"/>
+  <!-- 4-pointed star at tip -->
+  <path d="M 82,18 L 87,35 L 104,40 L 87,45 L 82,62 L 77,45 L 60,40 L 77,35 Z" fill="#FFD700"/>
+  <!-- Small sparkles -->
+  <path d="M 108,22 L 110,28 L 116,30 L 110,32 L 108,38 L 106,32 L 100,30 L 106,28 Z" fill="#FFD700" opacity="0.8"/>
+  <circle cx="114" cy="62" r="3" fill="#FFD700" opacity="0.6"/>
+  <circle cx="100" cy="15" r="2.5" fill="#FFD700" opacity="0.5"/>
+</svg>
