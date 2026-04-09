@@ -1,12 +1,14 @@
 # Magic Numbers
 
-A Chrome extension that helps you see the real cost of a Disney World resort stay — not just the nightly rate.
+A Chrome extension that helps you get to the real cost of a Disney World resort stay — not just the nightly rate.
 
 ---
 
 ## What it does
 
-When you're browsing Disney World resorts, the site shows a per-night price. Magic Numbers does the math for you and shows the **estimated trip total** (including tax) right on the page, based on your selected dates.
+When you're browsing Walt Disney World hotels, it's hard to see the full price, **and** it's hard to compare rooms vs package deals.
+
+When the site shows a per-night price. Magic Numbers does the math for you and shows the **estimated trip total** (including tax) right on the page, based on your selected dates.
 
 ![Screenshot of the Walt Disney Wold website, showing the extension adding helpful price content. There's a box to the right of the usual prices that shows a total for the entire trip. There's a spot to enter the ticket cost for the trip.](docs/img/magic-numbers.png)
 
@@ -17,13 +19,30 @@ To get a better picture of the total price, there's a **ticket cost panel** wher
 
 The ticket cost you enter is remembered as you browse between pages.
 
+## Cool, how do I install it?
+
+### Desktop
+
+- Install from the Chrome Web Store
+  - It's been submitted and is pending approval now.
+- Install it manually:
+  - Go to the [GitHub Releases page](https://github.com/petecartwright/magic-numbers/releases)
+  - Download the newest `magic-numbers.zip`
+  - Unzip it on your computer
+  - Go to [chrome://extensions/](chrome://extensions/)
+  - Click "Developer Mode" in the top right corner
+  - Click "Load Unpacked" in the top left corner
+  - Find the directory you unzipped it to and click "Select"
+  - That's it!
+
+### Mobile
+
+Sorry! Chrome doesn't support extensions on mobile :(
+
 ## How to use it
 
-1. Go to the [Disney World resorts page](https://disneyworld.disney.go.com/resorts/) and select your check-in and check-out dates
-2. Magic Numbers will automatically show estimated totals on each resort card
-3. Enter your ticket budget in the **Ticket Cost** panel that appears in the top-right corner (you can drag it anywhere on the page)
+1. Go to the [Walt Disney World resorts page](https://disneyworld.disney.go.com/resorts/) and select your check-in and check-out dates
+1. Enter your ticket budget in the **Ticket Cost** panel that appears in the top-right corner (you can drag it anywhere on the page)
+1. On room rate pages, Magic Numbers will automatically show estimated totals next to the daily rate. On package rate pages, if you enter a ticket price, Magic Numbers will show you the daily rate.
 
-## Cool, how do I use it?
-
-- Install from the Chrome Web Store - (pending approval)
--
+All code written with love and Claude Code.
